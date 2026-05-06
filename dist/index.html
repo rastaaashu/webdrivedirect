@@ -14,7 +14,6 @@
   <meta property="og:type" content="website" />
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preload" as="image" imagesrcset="assets/img/poster-card-640.webp 640w, assets/img/poster-card-1024.webp 1024w" imagesizes="(max-width: 720px) 100vw, 600px" href="assets/img/poster-card-1024.webp" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Sora:wght@600;700;800;900&display=swap" />
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
@@ -23,16 +22,31 @@
   <!-- NAV -->
   <header class="nav">
     <a class="nav__brand" href="#hero" aria-label="Drive Direct home">
-      <svg class="nav__logo" viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <path d="M30 14 H78 a48 48 0 0 1 48 48 v0 a48 48 0 0 1 -48 48 H30 z" fill="currentColor" />
-        <path d="M70 14 H118 a48 48 0 0 1 48 48 v0 a48 48 0 0 1 -48 48 H70 z" fill="#3aa6ff" opacity=".95" />
-      </svg>
+      <span class="nav__mark" aria-hidden="true">
+        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+          <rect x="1" y="1" width="30" height="30" rx="9" fill="url(#ddmark)" />
+          <path d="M11 9 L20 16 L11 23" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+          <path d="M16 9 L22 16 L16 23" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity=".55" />
+          <defs>
+            <linearGradient id="ddmark" x1="0" y1="0" x2="0" y2="32" gradientUnits="userSpaceOnUse">
+              <stop offset="0" stop-color="#6ec1ff" />
+              <stop offset="1" stop-color="#1a73d4" />
+            </linearGradient>
+          </defs>
+        </svg>
+      </span>
       <span class="nav__name">Drive Direct</span>
     </a>
-    <a class="nav__cta" href="tel:+17253431515">
-      <span class="nav__cta-dot" aria-hidden="true"></span>
-      <span>725-343-1515</span>
-    </a>
+    <div class="nav__actions">
+      <a class="nav__phone" href="tel:+17253431515" aria-label="Call 725-343-1515">
+        <span class="nav__phone-dot" aria-hidden="true"></span>
+        <span class="nav__phone-num">725-343-1515</span>
+      </a>
+      <a class="nav__book btn btn--primary" href="sms:+17253431515?&body=Hi%20Drive%20Direct%2C%20I%27d%20like%20to%20book%20a%20ride.%20Pickup%3A%20%20Drop-off%3A%20%20Date%2FTime%3A%20">
+        <span>Book Now</span>
+        <span class="btn__arrow" aria-hidden="true">→</span>
+      </a>
+    </div>
   </header>
 
   <main>
@@ -78,46 +92,26 @@
           </ul>
         </div>
 
-        <div class="hero__visual">
-          <div class="hero__visual-frame">
-            <picture>
-              <source type="image/webp"
-                srcset="assets/img/poster-card-640.webp 640w, assets/img/poster-card-1024.webp 1024w, assets/img/poster-card-1280.webp 1280w"
-                sizes="(max-width: 900px) 90vw, 600px" />
-              <img class="hero__visual-img"
-                src="assets/img/poster-card-1024.jpg"
-                srcset="assets/img/poster-card-640.jpg 640w, assets/img/poster-card-1024.jpg 1024w, assets/img/poster-card-1280.jpg 1280w"
-                sizes="(max-width: 900px) 90vw, 600px"
-                alt="Lucid Blue Hyundai Ioniq — your Drive Direct ride"
-                width="1280" height="853" loading="eager" fetchpriority="high" />
-            </picture>
-            <div class="hero__visual-shine" aria-hidden="true"></div>
+        <aside class="hero__services" aria-labelledby="hero-services-title">
+          <div class="hero__services-card">
+            <div class="hero__services-head">
+              <p class="hero__services-eyebrow">SERVICES</p>
+              <h2 class="hero__services-title" id="hero-services-title">Anywhere you need.</h2>
+            </div>
+            <ul class="hero__services-grid">
+              <li><span aria-hidden="true">✈️</span><span>Airport Rides</span></li>
+              <li><span aria-hidden="true">📍</span><span>Local Rides</span></li>
+              <li><span aria-hidden="true">📅</span><span>Scheduled Pickups</span></li>
+              <li><span aria-hidden="true">🚘</span><span>Long Distance</span></li>
+              <li><span aria-hidden="true">⏰</span><span>Hourly Private Driver</span></li>
+              <li><span aria-hidden="true">📦</span><span>Delivery on Request</span></li>
+            </ul>
+            <div class="hero__services-area">
+              <span class="hero__services-area-label">Serving</span>
+              <span class="hero__services-area-list">IE · LA · OC · SoCal</span>
+            </div>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SERVICES -->
-    <section class="services" id="services" aria-labelledby="services-title">
-      <div class="container">
-        <header class="section__head">
-          <p class="section__eyebrow">SERVICES</p>
-          <h2 class="section__title" id="services-title">Anywhere you need to go.</h2>
-        </header>
-
-        <ul class="services__grid">
-          <li class="service"><span class="service__ico" aria-hidden="true">✈️</span><span>Airport Rides</span></li>
-          <li class="service"><span class="service__ico" aria-hidden="true">📍</span><span>Local Rides</span></li>
-          <li class="service"><span class="service__ico" aria-hidden="true">📅</span><span>Scheduled Pickups</span></li>
-          <li class="service"><span class="service__ico" aria-hidden="true">🚘</span><span>Long Distance Trips</span></li>
-          <li class="service"><span class="service__ico" aria-hidden="true">⏰</span><span>Hourly Private Driver</span></li>
-          <li class="service"><span class="service__ico" aria-hidden="true">📦</span><span>Delivery Upon Request</span></li>
-        </ul>
-
-        <div class="services__area">
-          <span class="services__area-label">Serving</span>
-          <span class="services__area-list">IE · LA · OC · SoCal</span>
-        </div>
+        </aside>
       </div>
     </section>
 

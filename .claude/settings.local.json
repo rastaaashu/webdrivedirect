@@ -1,0 +1,43 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -c \"from PIL import Image; img=Image.open\\('drivdd.jpg'\\); print\\('drivdd:', img.size, img.mode\\); img2=Image.open\\('photo_2026-05-06_08-04-59.jpg'\\); print\\('poster:', img2.size, img2.mode\\)\")",
+      "Bash(identify drivdd.jpg photo_2026-05-06_08-04-59.jpg)",
+      "Bash(python src/prep_assets.py)",
+      "Bash(python -m http.server 8765 --bind 127.0.0.1)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" \"http://127.0.0.1:8765/\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" \"http://127.0.0.1:8765/assets/img/qr.png\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" \"http://127.0.0.1:8765/assets/css/styles.css\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" \"http://127.0.0.1:8765/assets/js/main.js\")",
+      "Skill(gstack)",
+      "Bash(curl -s -o /dev/null -w \"html:%{http_code} sz:%{size_download}\\\\n\" \"http://127.0.0.1:8765/\")",
+      "Bash(curl -s -o /dev/null -w \"css:%{http_code} sz:%{size_download}\\\\n\" \"http://127.0.0.1:8765/assets/css/styles.css\")",
+      "Bash(curl -s -o /dev/null -w \"js:%{http_code} sz:%{size_download}\\\\n\" \"http://127.0.0.1:8765/assets/js/main.js\")",
+      "Bash(curl -s -o /dev/null -w \"poster640.webp:%{http_code} sz:%{size_download}\\\\n\" \"http://127.0.0.1:8765/assets/img/poster-card-640.webp\")",
+      "Bash(curl -s -o /dev/null -w \"poster1024.webp:%{http_code} sz:%{size_download}\\\\n\" \"http://127.0.0.1:8765/assets/img/poster-card-1024.webp\")",
+      "Bash(./setup)",
+      "Bash(bun run *)",
+      "Bash(node --check \"C:/Users/aashu/OneDrive/Desktop/webdrivedirect/dist/assets/js/main.js\")",
+      "Bash(npx --yes playwright -V)",
+      "Bash(node src/smoke.mjs)",
+      "Bash(curl -s -o /dev/null -w \"html:%{http_code}\\\\n\" \"http://127.0.0.1:8765/\")",
+      "Bash(curl -s \"http://127.0.0.1:8765/\")",
+      "Bash(gh --version)",
+      "Bash(netlify --version)",
+      "Bash(gh auth *)",
+      "Bash(netlify status *)",
+      "Bash(gh repo *)",
+      "Bash(netlify api *)",
+      "Bash(netlify sites:list)",
+      "Bash(netlify link *)",
+      "Bash(netlify deploy *)",
+      "Bash(git init *)",
+      "Bash(git add *)",
+      "Bash(git -c user.email=\"aashutoshpant2003@gmail.com\" -c user.name=\"rastaaashu\" commit -m \"Drive Direct: condensed conversion-focused redesign \\(hero CTAs, services, about driver, final CTA\\)\")",
+      "Bash(curl -s -o /dev/null -w \"HTTP %{http_code} | %{size_download} bytes\\\\n\" https://drivedirectxyz.netlify.app/)",
+      "Bash(curl -s https://drivedirectxyz.netlify.app/)",
+      "Bash(git -c user.email=\"aashutoshpant2003@gmail.com\" -c user.name=\"rastaaashu\" commit -m \"Landing-page conversion pass: services in hero, Book Now in nav, new logo mark\")",
+      "Bash(git push *)"
+    ]
+  }
+}
