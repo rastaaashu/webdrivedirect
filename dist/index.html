@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="theme-color" content="#0a0e1a" />
+  <meta name="theme-color" content="#060912" />
   <title>Drive Direct — Ride Direct. Pay Less.</title>
-  <meta name="description" content="Private driver service across SoCal. Direct communication, reliable pickups, premium comfort. 4.97 rated, 11+ years experience, same driver every ride." />
+  <meta name="description" content="Private driver service across SoCal. Direct communication, reliable pickups, premium EV comfort. 4.97 rated, 11+ years experience, same driver every ride." />
   <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
   <meta property="og:title" content="Drive Direct — Ride Direct. Pay Less." />
@@ -14,13 +14,40 @@
   <meta property="og:type" content="website" />
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="image" imagesrcset="assets/img/poster-card-640.webp 640w, assets/img/poster-card-1024.webp 1024w" imagesizes="(max-width: 900px) 100vw, 700px" href="assets/img/poster-card-1024.webp" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Sora:wght@600;700;800;900&display=swap" />
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body>
 
-  <!-- NAV -->
-  <header class="nav">
+<!-- ICON SPRITES -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-book" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 4h14a1 1 0 0 1 1 1v15a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1zM4 9h16M8 3v3M16 3v3M9 14h2m4 0h-2"/></symbol>
+    <symbol id="i-text" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M21 12a8 8 0 0 1-12 6.93L4 20l1.07-5A8 8 0 1 1 21 12z"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/></symbol>
+    <symbol id="i-airplane" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5z"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M16 2v4M8 2v4M3 10h18"/></symbol>
+    <symbol id="i-road" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M3 22 7 2h10l4 20M12 6v2M12 12v2M12 18v2"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/><path stroke="currentColor" stroke-width="1.5" stroke-linecap="round" d="M18 4l1 2 2 1-2 1-1 2-1-2-2-1 2-1z"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M12 7v5l3 2"/></symbol>
+    <symbol id="i-box" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M21 8 12 3 3 8v8l9 5 9-5z M3 8l9 5 9-5M12 13v8"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="1.8"/><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="m8 12 3 3 5-6"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" d="m12 2 3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14 2 9.27l6.91-1.01z"/></symbol>
+    <symbol id="i-bolt" viewBox="0 0 24 24"><path fill="currentColor" d="M13 2 3 14h7l-1 8 10-12h-7z"/></symbol>
+    <symbol id="i-leaf" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M4 20c0-9 7-16 16-16-2 9-7 16-16 16zM4 20c2-2 4-3 7-4"/></symbol>
+    <symbol id="i-mute" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M11 5 6 9H3v6h3l5 4zM23 9l-6 6M17 9l6 6"/></symbol>
+    <symbol id="i-diamond" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M2.7 10.3 12 21.5l9.3-11.2L17 3H7zM7 3l5 7.5L17 3M2.7 10.3h18.6"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M4 21c0-4 4-7 8-7s8 3 8 7"/></symbol>
+    <symbol id="i-arrow-r" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  </defs>
+</svg>
+
+<!-- NAV -->
+<header class="nav">
+  <div class="nav__inner">
     <a class="nav__brand" href="#hero" aria-label="Drive Direct home">
       <span class="nav__mark" aria-hidden="true">
         <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
@@ -35,155 +62,196 @@
           </defs>
         </svg>
       </span>
-      <span class="nav__name">Drive Direct</span>
+      <span class="nav__name">DRIVE <span>DIRECT</span></span>
     </a>
-    <div class="nav__actions">
-      <a class="nav__phone" href="tel:+17253431515" aria-label="Call 725-343-1515">
-        <span class="nav__phone-dot" aria-hidden="true"></span>
-        <span class="nav__phone-num">725-343-1515</span>
-      </a>
-      <a class="nav__book btn btn--primary" href="sms:+17253431515?&body=Hi%20Drive%20Direct%2C%20I%27d%20like%20to%20book%20a%20ride.%20Pickup%3A%20%20Drop-off%3A%20%20Date%2FTime%3A%20">
-        <span>Book Now</span>
-        <span class="btn__arrow" aria-hidden="true">→</span>
-      </a>
+
+    <nav class="nav__menu" aria-label="Primary">
+      <a href="#hero" class="is-active">Home</a>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#why">Why Drive Direct</a>
+      <a href="#book">Contact</a>
+    </nav>
+
+    <a class="nav__phone" href="tel:+17253431515" aria-label="Call 725-343-1515">
+      <svg class="nav__phone-ico" aria-hidden="true"><use href="#i-phone"/></svg>
+      <span>725-343-1515</span>
+    </a>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero__bg" aria-hidden="true">
+      <picture>
+        <source type="image/webp" srcset="assets/img/poster-card-640.webp 640w, assets/img/poster-card-1024.webp 1024w, assets/img/poster-card-1280.webp 1280w" sizes="(max-width: 900px) 100vw, 65vw" />
+        <img src="assets/img/poster-card-1280.jpg" srcset="assets/img/poster-card-640.jpg 640w, assets/img/poster-card-1024.jpg 1024w, assets/img/poster-card-1280.jpg 1280w" sizes="(max-width: 900px) 100vw, 65vw" alt="" width="1280" height="853" loading="eager" fetchpriority="high"/>
+      </picture>
+      <div class="hero__bg-tint"></div>
+      <div class="hero__bg-fade"></div>
     </div>
-  </header>
 
-  <main>
+    <div class="hero__inner">
+      <div class="hero__copy">
+        <h1 class="hero__title">
+          <span class="hero__title-line">Ride Direct.</span>
+          <span class="hero__title-line hero__title-line--blue">Pay Less.</span>
+        </h1>
+        <p class="hero__sub"><span class="hero__sub-rule"></span>Skip the App. Ride Direct.<span class="hero__sub-rule"></span></p>
 
-    <!-- HERO (above the fold) -->
-    <section class="hero" id="hero">
-      <div class="hero__bg" aria-hidden="true">
-        <div class="hero__glow hero__glow--a"></div>
-        <div class="hero__glow hero__glow--b"></div>
-        <div class="hero__grid"></div>
-      </div>
-
-      <div class="hero__inner">
-        <div class="hero__copy">
-          <p class="hero__eyebrow">PRIVATE DRIVER · SOCAL</p>
-          <h1 class="hero__title">
-            <span class="hero__title-line">Ride Direct.</span>
-            <span class="hero__title-line hero__title-line--blue">Pay Less.</span>
-          </h1>
-          <p class="hero__sub">
-            Private driver service across SoCal with direct communication, reliable pickups, and premium comfort.
-          </p>
-
-          <div class="hero__cta">
-            <a class="btn btn--primary" href="sms:+17253431515?&body=Hi%20Drive%20Direct%2C%20I%27d%20like%20to%20book%20a%20ride.%20Pickup%3A%20%20Drop-off%3A%20%20Date%2FTime%3A%20">
-              <span>Book a Ride</span>
-              <span class="btn__arrow" aria-hidden="true">→</span>
-            </a>
-            <a class="btn btn--ghost" href="sms:+17253431515">
-              <span>Text Now</span>
-            </a>
-            <a class="btn btn--ghost" href="tel:+17253431515">
-              <span>Call Now</span>
-            </a>
-          </div>
-
-          <ul class="hero__trust" aria-label="Trust indicators">
-            <li><span aria-hidden="true">★</span> 4.97 Rated</li>
-            <li><span aria-hidden="true">·</span></li>
-            <li>11+ Years Experience</li>
-            <li><span aria-hidden="true">·</span></li>
-            <li>Same Driver Every Ride</li>
-          </ul>
-        </div>
-
-        <aside class="hero__services" aria-labelledby="hero-services-title">
-          <div class="hero__services-card">
-            <div class="hero__services-head">
-              <p class="hero__services-eyebrow">SERVICES</p>
-              <h2 class="hero__services-title" id="hero-services-title">Anywhere you need.</h2>
-            </div>
-            <ul class="hero__services-grid">
-              <li><span aria-hidden="true">✈️</span><span>Airport Rides</span></li>
-              <li><span aria-hidden="true">📍</span><span>Local Rides</span></li>
-              <li><span aria-hidden="true">📅</span><span>Scheduled Pickups</span></li>
-              <li><span aria-hidden="true">🚘</span><span>Long Distance</span></li>
-              <li><span aria-hidden="true">⏰</span><span>Hourly Private Driver</span></li>
-              <li><span aria-hidden="true">📦</span><span>Delivery on Request</span></li>
-            </ul>
-            <div class="hero__services-area">
-              <span class="hero__services-area-label">Serving</span>
-              <span class="hero__services-area-list">IE · LA · OC · SoCal</span>
-            </div>
-          </div>
-        </aside>
-      </div>
-    </section>
-
-    <!-- ABOUT YOUR DRIVER -->
-    <section class="why" id="about" aria-labelledby="why-title">
-      <div class="container">
-        <header class="section__head">
-          <p class="section__eyebrow">ABOUT YOUR DRIVER</p>
-          <h2 class="section__title" id="why-title">A better ride, every ride.</h2>
-        </header>
-
-        <p class="why__lede">
-          Drive Direct was created to offer a more personal and affordable alternative to traditional rideshare services. By connecting riders directly with their driver, customers receive more reliable service, better communication, and lower pricing &mdash; without the added platform markups.
-        </p>
-
-        <ul class="why__list">
-          <li><span class="why__check" aria-hidden="true">✓</span> 11+ Years Experience</li>
-          <li><span class="why__check" aria-hidden="true">✓</span> Same Driver Every Ride</li>
-          <li><span class="why__check" aria-hidden="true">✓</span> Direct Communication &mdash; No Silent or Awkward Rides</li>
-          <li><span class="why__check" aria-hidden="true">✓</span> Safety-Focused &amp; Reliable</li>
-          <li><span class="why__check" aria-hidden="true">✓</span> Comfortable, Professional Experience</li>
-          <li><span class="why__check" aria-hidden="true">✓</span> Strong Customer Relationships &amp; Repeat Riders</li>
-          <li><span class="why__check" aria-hidden="true">✓</span> Reliable Scheduled Pickups</li>
-          <li><span class="why__check" aria-hidden="true">✓</span> Better Rates Than Traditional Rideshare</li>
-        </ul>
-
-        <div class="why__stats">
-          <div class="stat">
-            <span class="stat__num">4.97</span>
-            <span class="stat__label">★ Rating on Major Rideshare Platform</span>
-          </div>
-          <div class="stat">
-            <span class="stat__num">11+</span>
-            <span class="stat__label">Years Driving Experience</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- FINAL CTA -->
-    <section class="closing" id="book" aria-labelledby="closing-title">
-      <div class="container closing__inner">
-        <h2 class="closing__title" id="closing-title">Ready to Ride?</h2>
-        <p class="closing__sub">Direct line. Same driver. Premium comfort.</p>
-        <div class="closing__cta">
-          <a class="btn btn--primary btn--lg" href="sms:+17253431515?&body=Hi%20Drive%20Direct%2C%20I%27d%20like%20to%20book%20a%20ride.%20Pickup%3A%20%20Drop-off%3A%20%20Date%2FTime%3A%20">
-            <span>Book Now</span>
-            <span class="btn__arrow" aria-hidden="true">→</span>
+        <div class="hero__cta">
+          <a class="btn btn--ghost" href="sms:+17253431515?&body=Hi%20Drive%20Direct%2C%20I%27d%20like%20to%20book%20a%20ride.%20Pickup%3A%20%20Drop-off%3A%20%20Date%2FTime%3A%20">
+            <svg aria-hidden="true"><use href="#i-book"/></svg><span>Book Now</span>
           </a>
-          <a class="btn btn--ghost btn--lg" href="sms:+17253431515">Text Direct</a>
-          <a class="btn btn--ghost btn--lg" href="tel:+17253431515">Call</a>
+          <a class="btn btn--ghost" href="sms:+17253431515">
+            <svg aria-hidden="true"><use href="#i-text"/></svg><span>Text Direct</span>
+          </a>
+          <a class="btn btn--ghost" href="tel:+17253431515">
+            <svg aria-hidden="true"><use href="#i-phone"/></svg><span>Call Now</span>
+          </a>
+        </div>
+
+        <a class="hero__phone btn btn--ghost btn--phone" href="tel:+17253431515">
+          <svg aria-hidden="true"><use href="#i-phone"/></svg>
+          <span>725-343-1515</span>
+        </a>
+
+        <ul class="hero__trust" aria-label="Trust indicators">
+          <li><svg aria-hidden="true"><use href="#i-star"/></svg><span>11+ Years Experience</span></li>
+          <li class="hero__trust-sep" aria-hidden="true"></li>
+          <li><svg aria-hidden="true"><use href="#i-star"/></svg><span>4.97 Rated</span></li>
+          <li class="hero__trust-sep" aria-hidden="true"></li>
+          <li><svg aria-hidden="true"><use href="#i-user"/></svg><span>Same Driver Every Ride</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services" id="services" aria-labelledby="services-title">
+    <div class="container">
+      <header class="section__head section__head--center">
+        <p class="section__eyebrow"><span class="rule"></span>SERVICES<span class="rule"></span></p>
+        <h2 class="section__title" id="services-title">Anywhere You Need to Go.</h2>
+      </header>
+
+      <ul class="services__row">
+        <li class="srv"><span class="srv__ico"><svg aria-hidden="true"><use href="#i-airplane"/></svg></span><span class="srv__lbl">Airport<br>Rides</span></li>
+        <li class="srv"><span class="srv__ico"><svg aria-hidden="true"><use href="#i-pin"/></svg></span><span class="srv__lbl">Local<br>Rides</span></li>
+        <li class="srv"><span class="srv__ico"><svg aria-hidden="true"><use href="#i-calendar"/></svg></span><span class="srv__lbl">Scheduled<br>Pickups</span></li>
+        <li class="srv"><span class="srv__ico"><svg aria-hidden="true"><use href="#i-road"/></svg></span><span class="srv__lbl">Long<br>Distance</span></li>
+        <li class="srv"><span class="srv__ico"><svg aria-hidden="true"><use href="#i-moon"/></svg></span><span class="srv__lbl">Late<br>Night</span></li>
+        <li class="srv"><span class="srv__ico"><svg aria-hidden="true"><use href="#i-clock"/></svg></span><span class="srv__lbl">Hourly<br>Private Driver</span></li>
+        <li class="srv"><span class="srv__ico"><svg aria-hidden="true"><use href="#i-box"/></svg></span><span class="srv__lbl">Delivery<br>on Request</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about" aria-labelledby="about-title">
+    <div class="container about__inner">
+      <div class="about__copy">
+        <p class="section__eyebrow about__eyebrow">ABOUT YOUR DRIVER</p>
+        <h2 class="section__title about__title" id="about-title">A Better Ride,<br>Every Ride.</h2>
+        <p class="about__lede">Drive Direct was created to give riders a more personal, reliable, and affordable option by connecting directly with the driver &mdash; no app markups, no silent awkward rides, and better communication.</p>
+        <a class="btn btn--primary about__btn" href="#why">
+          <svg aria-hidden="true"><use href="#i-user"/></svg>
+          <span>Learn More About Me</span>
+        </a>
+      </div>
+
+      <div class="about__visual">
+        <picture>
+          <source type="image/webp" srcset="assets/img/poster-card-640.webp 640w, assets/img/poster-card-1024.webp 1024w, assets/img/poster-card-1280.webp 1280w" sizes="(max-width: 900px) 90vw, 600px" />
+          <img class="about__img" src="assets/img/poster-card-1024.jpg" srcset="assets/img/poster-card-640.jpg 640w, assets/img/poster-card-1024.jpg 1024w, assets/img/poster-card-1280.jpg 1280w" sizes="(max-width: 900px) 90vw, 600px" alt="Lucid Blue Hyundai Ioniq 5 — your Drive Direct ride" width="1280" height="853" loading="lazy"/>
+        </picture>
+        <div class="about__badge">
+          <span class="about__badge-name">Ioniq 5 Limited</span>
+          <span class="about__badge-meta">100% EV <svg aria-hidden="true"><use href="#i-bolt"/></svg></span>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-  </main>
+  <!-- WHY -->
+  <section class="why" id="why" aria-labelledby="why-title">
+    <div class="container">
+      <header class="section__head section__head--center">
+        <p class="section__eyebrow"><span class="rule"></span>WHY RIDERS CHOOSE DRIVE DIRECT<span class="rule"></span></p>
+      </header>
 
-  <footer class="foot">
-    <div class="container foot__inner">
-      <div class="foot__brand">
-        <span class="foot__name">Drive Direct</span>
-        <span class="foot__tag">Skip the App. Ride Direct.</span>
+      <ul class="why__grid">
+        <li class="wcard"><svg class="wcard__ico" aria-hidden="true"><use href="#i-check"/></svg><span class="wcard__t">11+ Years</span><span class="wcard__s">Driving Experience</span></li>
+        <li class="wcard"><svg class="wcard__ico" aria-hidden="true"><use href="#i-check"/></svg><span class="wcard__t">Same Driver</span><span class="wcard__s">Every Ride</span></li>
+        <li class="wcard"><svg class="wcard__ico" aria-hidden="true"><use href="#i-check"/></svg><span class="wcard__t">Direct</span><span class="wcard__s">Communication</span></li>
+        <li class="wcard"><svg class="wcard__ico" aria-hidden="true"><use href="#i-check"/></svg><span class="wcard__t">Safety-Focused</span><span class="wcard__s">&amp; Reliable</span></li>
+        <li class="wcard"><svg class="wcard__ico" aria-hidden="true"><use href="#i-check"/></svg><span class="wcard__t">Comfortable</span><span class="wcard__s">Professional Experience</span></li>
+        <li class="wcard"><svg class="wcard__ico" aria-hidden="true"><use href="#i-check"/></svg><span class="wcard__t">Strong Repeat-Rider</span><span class="wcard__s">Relationships</span></li>
+        <li class="wcard"><svg class="wcard__ico" aria-hidden="true"><use href="#i-check"/></svg><span class="wcard__t">Better Rates</span><span class="wcard__s">Than Traditional Rideshare</span></li>
+        <li class="wcard wcard--accent"><span class="wcard__num">4.97 <svg aria-hidden="true"><use href="#i-star"/></svg></span><span class="wcard__s">Rated on Major Rideshare Platform</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- CLOSING CTA -->
+  <section class="closing" id="book" aria-labelledby="closing-title">
+    <div class="closing__chevrons closing__chevrons--l" aria-hidden="true">
+      <span></span><span></span>
+    </div>
+    <div class="closing__chevrons closing__chevrons--r" aria-hidden="true">
+      <span></span><span></span>
+    </div>
+
+    <div class="container closing__inner">
+      <h2 class="closing__title" id="closing-title">Ready to Ride?</h2>
+      <p class="closing__sub"><span class="hero__sub-rule"></span>Skip the App. Ride Direct.<span class="hero__sub-rule"></span></p>
+
+      <div class="closing__cta">
+        <a class="btn btn--ghost btn--lg" href="sms:+17253431515?&body=Hi%20Drive%20Direct%2C%20I%27d%20like%20to%20book%20a%20ride.%20Pickup%3A%20%20Drop-off%3A%20%20Date%2FTime%3A%20">
+          <svg aria-hidden="true"><use href="#i-book"/></svg><span>Book Now</span>
+        </a>
+        <a class="btn btn--ghost btn--lg" href="sms:+17253431515">
+          <svg aria-hidden="true"><use href="#i-text"/></svg><span>Text Direct</span>
+        </a>
+        <a class="btn btn--ghost btn--lg" href="tel:+17253431515">
+          <svg aria-hidden="true"><use href="#i-phone"/></svg><span>Call Now</span>
+        </a>
       </div>
+
+      <a class="btn btn--ghost btn--phone btn--lg closing__phone" href="tel:+17253431515">
+        <svg aria-hidden="true"><use href="#i-phone"/></svg>
+        <span>725-343-1515</span>
+      </a>
+
+      <ul class="closing__features" aria-label="Vehicle features">
+        <li><svg aria-hidden="true"><use href="#i-bolt"/></svg><span>100% EV</span></li>
+        <li><svg aria-hidden="true"><use href="#i-leaf"/></svg><span>Eco-Friendly</span></li>
+        <li><svg aria-hidden="true"><use href="#i-mute"/></svg><span>Quiet Ride</span></li>
+        <li><svg aria-hidden="true"><use href="#i-diamond"/></svg><span>Premium Comfort</span></li>
+        <li><svg aria-hidden="true"><use href="#i-shield"/></svg><span>Safe &amp; Reliable</span></li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="container foot__inner">
+    <p class="foot__serving"><span class="foot__rule"></span>Serving <strong>IE</strong> &middot; <strong>LA</strong> &middot; <strong>OC</strong> &middot; <strong>SoCal</strong><span class="foot__rule"></span></p>
+    <div class="foot__row">
+      <span class="foot__name">Drive Direct</span>
       <div class="foot__contact">
         <a href="tel:+17253431515">725-343-1515</a>
         <a href="sms:+17253431515">Text us</a>
       </div>
-      <p class="foot__copy">&copy; <span id="year"></span> Drive Direct. Serving IE · LA · OC · SoCal.</p>
+      <p class="foot__copy">&copy; <span id="year"></span> Drive Direct.</p>
     </div>
-  </footer>
+  </div>
+</footer>
 
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
-  <script src="assets/js/main.js" defer></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script src="assets/js/main.js" defer></script>
 </body>
 </html>
