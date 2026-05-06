@@ -3,17 +3,21 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="theme-color" content="#060912" />
+  <meta name="theme-color" content="#050912" />
   <title>Drive Direct — Ride Direct. Pay Less.</title>
   <meta name="description" content="Private driver service across SoCal. Direct communication, reliable pickups, premium EV comfort. 4.97 rated, 11+ years experience, same driver every ride." />
   <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
   <meta property="og:title" content="Drive Direct — Ride Direct. Pay Less." />
   <meta property="og:description" content="Private driver service across SoCal. Same driver, direct line, premium EV." />
+  <meta property="og:image" content="assets/img/car-hero-1600.jpg" />
   <meta property="og:type" content="website" />
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="image" imagesrcset="assets/img/car-cutout-1024.webp 1024w, assets/img/car-cutout-1600.webp 1600w, assets/img/car-cutout-2200.webp 2200w" imagesizes="(max-width: 900px) 100vw, 70vw" href="assets/img/car-cutout-1600.webp" />
+  <link rel="preload" as="image" imagesrcset="assets/img/la-skyline-1024.webp 1024w, assets/img/la-skyline-1600.webp 1600w" imagesizes="(max-width: 900px) 100vw, 70vw" href="assets/img/la-skyline-1024.webp" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Sora:wght@600;700;800;900&display=swap" />
-  <link rel="stylesheet" href="assets/css/styles.css?v=4" />
+  <link rel="stylesheet" href="assets/css/styles.css?v=8" />
 </head>
 <body>
 
@@ -38,164 +42,6 @@
     <symbol id="i-diamond" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M2.7 10.3 12 21.5l9.3-11.2L17 3H7zM7 3l5 7.5L17 3M2.7 10.3h18.6"/></symbol>
     <symbol id="i-shield" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></symbol>
     <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M4 21c0-4 4-7 8-7s8 3 8 7"/></symbol>
-
-    <!-- Reusable Lucid-Blue EV crossover (stylized Ioniq-5 silhouette, side 3/4 angle) -->
-    <symbol id="ev-car" viewBox="0 0 800 320">
-      <defs>
-        <linearGradient id="bodyG" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0" stop-color="#9bd0f5"/>
-          <stop offset=".35" stop-color="#5fa8e8"/>
-          <stop offset=".7" stop-color="#2f74c1"/>
-          <stop offset="1" stop-color="#1a4a87"/>
-        </linearGradient>
-        <linearGradient id="bodyTop" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0" stop-color="#cfe6fa"/>
-          <stop offset="1" stop-color="#5fa8e8"/>
-        </linearGradient>
-        <linearGradient id="glassG" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0" stop-color="#0a1424"/>
-          <stop offset=".6" stop-color="#152a48"/>
-          <stop offset="1" stop-color="#1f3c66"/>
-        </linearGradient>
-        <linearGradient id="rockerG" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0" stop-color="#1a2a44"/>
-          <stop offset="1" stop-color="#070b16"/>
-        </linearGradient>
-        <radialGradient id="hlGlow" cx=".5" cy=".5" r=".7">
-          <stop offset="0" stop-color="#fff" stop-opacity=".8"/>
-          <stop offset="1" stop-color="#fff" stop-opacity="0"/>
-        </radialGradient>
-        <linearGradient id="rimG" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0" stop-color="#5d6c84"/>
-          <stop offset="1" stop-color="#1d2638"/>
-        </linearGradient>
-      </defs>
-
-      <!-- ground shadow -->
-      <ellipse cx="400" cy="288" rx="330" ry="14" fill="#000" opacity=".55"/>
-      <ellipse cx="400" cy="290" rx="280" ry="6" fill="#000" opacity=".7"/>
-
-      <!-- main body silhouette: long flat hood, raked windshield, fastback roof, squared rear hatch -->
-      <path d="M65 215
-               L80 175
-               C 100 150, 150 138, 215 132
-               L 270 130
-               L 300 92
-               C 330 70, 370 64, 420 64
-               L 540 64
-               C 580 64, 605 70, 625 92
-               L 660 130
-               L 705 134
-               C 730 138, 745 152, 748 175
-               L 738 215
-               Z"
-            fill="url(#bodyG)" stroke="#0a1424" stroke-width="1.2"/>
-
-      <!-- top highlight stripe -->
-      <path d="M310 96 C 340 78, 380 72, 430 72 L 540 72 C 580 72, 600 78, 620 96"
-            fill="none" stroke="url(#bodyTop)" stroke-width="3" stroke-linecap="round" opacity=".9"/>
-
-      <!-- greenhouse / glass -->
-      <path d="M310 96
-               C 340 78, 380 72, 430 72
-               L 540 72
-               C 580 72, 600 78, 620 96
-               L 640 128
-               L 295 128
-               Z"
-            fill="url(#glassG)"/>
-
-      <!-- A-pillar / B-pillar / C-pillar -->
-      <path d="M335 84 L 318 128" stroke="#0a1424" stroke-width="3" stroke-linecap="round"/>
-      <path d="M460 75 L 460 128" stroke="#0a1424" stroke-width="2.4" stroke-linecap="round"/>
-      <path d="M610 84 L 624 128" stroke="#0a1424" stroke-width="3" stroke-linecap="round"/>
-
-      <!-- chrome window line -->
-      <path d="M335 84 L 610 84" stroke="#9bd0f5" stroke-width="1.4" opacity=".55"/>
-      <path d="M310 96 L 620 96" stroke="#cfe6fa" stroke-width="1.2" opacity=".25"/>
-
-      <!-- character line down the side -->
-      <path d="M105 178 L 720 178" stroke="#0a1424" stroke-width="1" opacity=".5"/>
-      <path d="M105 180 L 720 180" stroke="#cfe6fa" stroke-width="1" opacity=".18"/>
-
-      <!-- door split -->
-      <path d="M395 132 L 395 215" stroke="#0a1424" stroke-width="1.2" opacity=".45"/>
-      <path d="M535 132 L 535 215" stroke="#0a1424" stroke-width="1.2" opacity=".45"/>
-
-      <!-- front fender flare highlight -->
-      <path d="M120 180 C 130 196, 160 208, 195 208" fill="none" stroke="#0a1424" stroke-width="1.2" opacity=".5"/>
-      <!-- rear fender flare -->
-      <path d="M610 208 C 645 208, 680 196, 690 178" fill="none" stroke="#0a1424" stroke-width="1.2" opacity=".5"/>
-
-      <!-- rocker panel / lower body -->
-      <path d="M75 215 L 738 215 L 728 240 L 88 240 Z" fill="url(#rockerG)"/>
-
-      <!-- pixel headlights cluster (left = front of car) -->
-      <g transform="translate(72,162)">
-        <ellipse cx="14" cy="6" rx="22" ry="14" fill="url(#hlGlow)" opacity=".9"/>
-        <rect x="0" y="0" width="6" height="6" rx="1" fill="#fff"/>
-        <rect x="8" y="0" width="6" height="6" rx="1" fill="#fff"/>
-        <rect x="16" y="0" width="6" height="6" rx="1" fill="#fff"/>
-        <rect x="24" y="0" width="6" height="6" rx="1" fill="#fff"/>
-        <rect x="0" y="8" width="6" height="6" rx="1" fill="#fff"/>
-        <rect x="8" y="8" width="6" height="6" rx="1" fill="#dbe9f7"/>
-        <rect x="16" y="8" width="6" height="6" rx="1" fill="#dbe9f7"/>
-        <rect x="24" y="8" width="6" height="6" rx="1" fill="#dbe9f7"/>
-      </g>
-
-      <!-- front grille / lower air dam -->
-      <path d="M70 195 L 100 195 L 110 215 L 80 215 Z" fill="#070b16" opacity=".95"/>
-
-      <!-- front tow / detail -->
-      <rect x="74" y="200" width="22" height="3" rx="1" fill="#3aa6ff" opacity=".7"/>
-
-      <!-- rear taillight strip -->
-      <rect x="700" y="156" width="38" height="6" rx="2" fill="#ff5b5b" opacity=".75"/>
-
-      <!-- WHEELS (forward + rear) -->
-      <!-- front wheel -->
-      <g transform="translate(195,228)">
-        <circle r="42" fill="#070b16"/>
-        <circle r="38" fill="#0a1424"/>
-        <circle r="22" fill="url(#rimG)"/>
-        <g stroke="#cfe6fa" stroke-width="1.4" opacity=".75">
-          <line x1="0" y1="-30" x2="0" y2="-12"/>
-          <line x1="0" y1="30" x2="0" y2="12"/>
-          <line x1="-30" y1="0" x2="-12" y2="0"/>
-          <line x1="30" y1="0" x2="12" y2="0"/>
-          <line x1="-21" y1="-21" x2="-9" y2="-9"/>
-          <line x1="21" y1="21" x2="9" y2="9"/>
-          <line x1="-21" y1="21" x2="-9" y2="9"/>
-          <line x1="21" y1="-21" x2="9" y2="-9"/>
-        </g>
-        <circle r="8" fill="#1d2638"/>
-        <circle r="3" fill="#5d6c84"/>
-      </g>
-      <!-- rear wheel -->
-      <g transform="translate(605,228)">
-        <circle r="42" fill="#070b16"/>
-        <circle r="38" fill="#0a1424"/>
-        <circle r="22" fill="url(#rimG)"/>
-        <g stroke="#cfe6fa" stroke-width="1.4" opacity=".75">
-          <line x1="0" y1="-30" x2="0" y2="-12"/>
-          <line x1="0" y1="30" x2="0" y2="12"/>
-          <line x1="-30" y1="0" x2="-12" y2="0"/>
-          <line x1="30" y1="0" x2="12" y2="0"/>
-          <line x1="-21" y1="-21" x2="-9" y2="-9"/>
-          <line x1="21" y1="21" x2="9" y2="9"/>
-          <line x1="-21" y1="21" x2="-9" y2="9"/>
-          <line x1="21" y1="-21" x2="9" y2="-9"/>
-        </g>
-        <circle r="8" fill="#1d2638"/>
-        <circle r="3" fill="#5d6c84"/>
-      </g>
-
-      <!-- subtle reflection on body -->
-      <path d="M120 110 L 200 96 L 280 92 L 280 100 L 200 104 L 120 118 Z" fill="#fff" opacity=".06"/>
-
-      <!-- hyundai-ish front emblem hint -->
-      <ellipse cx="92" cy="186" rx="6" ry="3" fill="#cfe6fa" opacity=".8"/>
-    </symbol>
   </defs>
 </svg>
 
@@ -203,20 +49,7 @@
 <header class="nav">
   <div class="nav__inner">
     <a class="nav__brand" href="#hero" aria-label="Drive Direct home">
-      <span class="nav__mark" aria-hidden="true">
-        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-          <rect x="1" y="1" width="30" height="30" rx="9" fill="url(#ddmark)"/>
-          <path d="M11 9 L20 16 L11 23" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-          <path d="M16 9 L22 16 L16 23" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity=".55"/>
-          <defs>
-            <linearGradient id="ddmark" x1="0" y1="0" x2="0" y2="32" gradientUnits="userSpaceOnUse">
-              <stop offset="0" stop-color="#7dc7ff"/>
-              <stop offset="1" stop-color="#1f6ed1"/>
-            </linearGradient>
-          </defs>
-        </svg>
-      </span>
-      <span class="nav__name">DRIVE <span>DIRECT</span></span>
+      <img class="nav__logo" src="assets/img/logo-lockup.png" alt="Drive Direct" width="155" height="34" />
     </a>
 
     <nav class="nav__menu" aria-label="Primary">
@@ -238,210 +71,16 @@
 
   <!-- HERO -->
   <section class="hero" id="hero">
-
-    <!-- HERO ART (right half) -->
-    <div class="hero-art" aria-hidden="true">
-      <svg class="hero-art__svg" viewBox="0 0 1200 760" preserveAspectRatio="xMidYMid slice">
-        <defs>
-          <linearGradient id="skyG" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0"   stop-color="#0a1428"/>
-            <stop offset=".45" stop-color="#0e2746"/>
-            <stop offset=".75" stop-color="#1a3d6c"/>
-            <stop offset="1"   stop-color="#3a5d8f"/>
-          </linearGradient>
-          <linearGradient id="hazeG" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0" stop-color="#ff8a3a" stop-opacity="0"/>
-            <stop offset=".5" stop-color="#ff8a3a" stop-opacity=".22"/>
-            <stop offset="1" stop-color="#1a3d6c" stop-opacity="0"/>
-          </linearGradient>
-          <linearGradient id="bldgBack" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0" stop-color="#1c3357"/>
-            <stop offset="1" stop-color="#0a1530"/>
-          </linearGradient>
-          <linearGradient id="bldgFront" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0" stop-color="#0c1a36"/>
-            <stop offset="1" stop-color="#040814"/>
-          </linearGradient>
-          <linearGradient id="roadG" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0" stop-color="#0a1424"/>
-            <stop offset=".5" stop-color="#1a2a44"/>
-            <stop offset="1" stop-color="#040814"/>
-          </linearGradient>
-          <radialGradient id="reflGlow" cx=".5" cy=".5" r=".5">
-            <stop offset="0" stop-color="#3aa6ff" stop-opacity=".4"/>
-            <stop offset="1" stop-color="#3aa6ff" stop-opacity="0"/>
-          </radialGradient>
-
-          <pattern id="winRow" x="0" y="0" width="9" height="14" patternUnits="userSpaceOnUse">
-            <rect x="2" y="3" width="3" height="6" fill="#ffd49a" opacity=".8"/>
-          </pattern>
-          <pattern id="winRowDim" x="0" y="0" width="11" height="16" patternUnits="userSpaceOnUse">
-            <rect x="2" y="4" width="3" height="6" fill="#ffd49a" opacity=".55"/>
-          </pattern>
-          <pattern id="winSparse" x="0" y="0" width="14" height="20" patternUnits="userSpaceOnUse">
-            <rect x="3" y="4" width="3" height="6" fill="#ffe2b0" opacity=".4"/>
-          </pattern>
-        </defs>
-
-        <!-- sky -->
-        <rect width="1200" height="760" fill="url(#skyG)"/>
-
-        <!-- low warm horizon haze -->
-        <rect x="0" y="370" width="1200" height="180" fill="url(#hazeG)"/>
-
-        <!-- distant moon glow -->
-        <circle cx="940" cy="180" r="60" fill="#ffd49a" opacity=".06"/>
-        <circle cx="940" cy="180" r="22" fill="#ffe2b0" opacity=".22"/>
-
-        <!-- distant skyline -->
-        <g opacity=".85">
-          <rect x="380"  y="320" width="60"  height="200" fill="url(#bldgBack)"/>
-          <rect x="445"  y="285" width="46"  height="235" fill="url(#bldgBack)"/>
-          <rect x="495"  y="250" width="52"  height="270" fill="url(#bldgBack)"/>
-          <rect x="552"  y="220" width="44"  height="300" fill="url(#bldgBack)"/>
-          <rect x="600"  y="185" width="60"  height="335" fill="url(#bldgBack)"/>
-          <rect x="664"  y="245" width="42"  height="275" fill="url(#bldgBack)"/>
-          <rect x="710"  y="270" width="52"  height="250" fill="url(#bldgBack)"/>
-          <rect x="766"  y="295" width="40"  height="225" fill="url(#bldgBack)"/>
-          <rect x="810"  y="265" width="50"  height="255" fill="url(#bldgBack)"/>
-          <rect x="864"  y="235" width="36"  height="285" fill="url(#bldgBack)"/>
-          <rect x="904"  y="280" width="46"  height="240" fill="url(#bldgBack)"/>
-        </g>
-
-        <!-- distant skyline windows -->
-        <g>
-          <rect x="385"  y="335" width="50"  height="180" fill="url(#winSparse)"/>
-          <rect x="450"  y="300" width="36"  height="215" fill="url(#winRowDim)"/>
-          <rect x="500"  y="265" width="42"  height="250" fill="url(#winRowDim)"/>
-          <rect x="557"  y="235" width="34"  height="280" fill="url(#winRowDim)"/>
-          <rect x="605"  y="200" width="50"  height="315" fill="url(#winRow)"/>
-          <rect x="669"  y="260" width="32"  height="255" fill="url(#winRowDim)"/>
-          <rect x="715"  y="285" width="42"  height="230" fill="url(#winRowDim)"/>
-          <rect x="770"  y="310" width="30"  height="205" fill="url(#winSparse)"/>
-          <rect x="815"  y="280" width="40"  height="235" fill="url(#winRowDim)"/>
-          <rect x="868"  y="250" width="28"  height="265" fill="url(#winRow)"/>
-          <rect x="908"  y="295" width="38"  height="220" fill="url(#winRowDim)"/>
-        </g>
-
-        <!-- closer skyline -->
-        <g>
-          <rect x="340" y="350" width="80"  height="170" fill="url(#bldgFront)"/>
-          <rect x="425" y="305" width="55"  height="215" fill="url(#bldgFront)"/>
-          <rect x="486" y="335" width="40"  height="185" fill="url(#bldgFront)"/>
-          <rect x="532" y="280" width="62"  height="240" fill="url(#bldgFront)"/>
-          <rect x="600" y="320" width="38"  height="200" fill="url(#bldgFront)"/>
-          <rect x="644" y="295" width="56"  height="225" fill="url(#bldgFront)"/>
-          <rect x="706" y="335" width="48"  height="185" fill="url(#bldgFront)"/>
-          <rect x="760" y="310" width="40"  height="210" fill="url(#bldgFront)"/>
-          <rect x="806" y="340" width="56"  height="180" fill="url(#bldgFront)"/>
-          <rect x="868" y="310" width="46"  height="210" fill="url(#bldgFront)"/>
-          <rect x="920" y="335" width="60"  height="185" fill="url(#bldgFront)"/>
-        </g>
-        <!-- closer skyline windows -->
-        <g>
-          <rect x="345" y="365" width="70" height="150" fill="url(#winRow)"/>
-          <rect x="430" y="320" width="45" height="195" fill="url(#winRow)"/>
-          <rect x="490" y="350" width="32" height="165" fill="url(#winRowDim)"/>
-          <rect x="538" y="295" width="52" height="220" fill="url(#winRow)"/>
-          <rect x="604" y="335" width="30" height="180" fill="url(#winRowDim)"/>
-          <rect x="650" y="310" width="46" height="205" fill="url(#winRow)"/>
-          <rect x="710" y="350" width="40" height="165" fill="url(#winRowDim)"/>
-          <rect x="765" y="325" width="32" height="190" fill="url(#winRow)"/>
-          <rect x="812" y="355" width="46" height="160" fill="url(#winRowDim)"/>
-          <rect x="872" y="325" width="38" height="190" fill="url(#winRow)"/>
-          <rect x="925" y="350" width="50" height="165" fill="url(#winRowDim)"/>
-        </g>
-
-        <!-- water reflection / wet road horizon -->
-        <rect x="0" y="520" width="1200" height="120" fill="url(#roadG)"/>
-
-        <!-- skyline reflection (mirror, faded) -->
-        <g opacity=".24" transform="translate(0,1042) scale(1,-1)">
-          <rect x="600"  y="185" width="60"  height="335" fill="#1c3357"/>
-          <rect x="664"  y="245" width="42"  height="275" fill="#1c3357"/>
-          <rect x="552"  y="220" width="44"  height="300" fill="#1c3357"/>
-          <rect x="864"  y="235" width="36"  height="285" fill="#1c3357"/>
-        </g>
-
-        <!-- road foreground -->
-        <rect x="0" y="640" width="1200" height="120" fill="#04070d"/>
-        <ellipse cx="600" cy="660" rx="700" ry="40" fill="url(#reflGlow)" opacity=".5"/>
-
-        <!-- palms (silhouettes) -->
-        <!-- left palm A -->
-        <g transform="translate(80,160) scale(.95)">
-          <path d="M0 600 C 8 420, 24 260, 35 80" stroke="#040814" stroke-width="9" fill="none" stroke-linecap="round"/>
-          <g fill="#040814">
-            <path d="M35 80 C 70 30, 110 18, 150 22 C 110 30, 80 50, 50 78 Z"/>
-            <path d="M35 80 C  0 35, -40 22, -80 28 C -40 36, -10 56, 30 80 Z"/>
-            <path d="M35 80 C 75 40, 135 30, 180 50 C 130 52, 90 65, 50 90 Z"/>
-            <path d="M35 80 C  -8 50, -80 45, -130 75 C -75 70, -30 75, 30 90 Z"/>
-            <path d="M35 80 C 15 30, 30 -10, 60 -50 C 50 -10, 40 30, 35 80 Z"/>
-            <path d="M35 80 C 55 30, 100 0, 150 -10 C 110 25, 75 60, 50 85 Z"/>
-            <path d="M35 80 C  20 30, -10 0, -60 -10 C -10 25, 20 60, 35 90 Z"/>
-          </g>
-        </g>
-        <!-- left palm B -->
-        <g transform="translate(180,200) scale(.7)">
-          <path d="M0 600 C 6 420, 18 260, 28 80" stroke="#040814" stroke-width="8" fill="none" stroke-linecap="round"/>
-          <g fill="#040814">
-            <path d="M28 80 C 60 30, 100 22, 140 30 C 100 35, 70 55, 40 80 Z"/>
-            <path d="M28 80 C  0 35, -40 28, -80 35 C -40 42, -10 60, 22 82 Z"/>
-            <path d="M28 80 C 65 50, 120 40, 170 60 C 120 60, 80 70, 40 90 Z"/>
-            <path d="M28 80 C 16 30, 25 -10, 50 -50 C 42 -10, 32 30, 28 80 Z"/>
-            <path d="M28 80 C 50 30, 95 0, 140 -10 C 100 25, 70 55, 45 85 Z"/>
-          </g>
-        </g>
-        <!-- right palm A -->
-        <g transform="translate(1090,140) scale(1.05)">
-          <path d="M0 620 C -10 440, -28 280, -40 90" stroke="#040814" stroke-width="9" fill="none" stroke-linecap="round"/>
-          <g fill="#040814">
-            <path d="M-40 90 C -75 35, -120 22, -160 28 C -120 35, -90 55, -55 88 Z"/>
-            <path d="M-40 90 C 0 40, 50 24, 90 30 C 50 35, 10 55, -30 90 Z"/>
-            <path d="M-40 90 C -85 50, -150 40, -200 70 C -140 65, -90 75, -45 95 Z"/>
-            <path d="M-40 90 C 0 45, 70 30, 130 55 C 80 60, 30 70, -25 95 Z"/>
-            <path d="M-40 90 C -25 30, -45 -10, -75 -55 C -55 -10, -45 35, -42 85 Z"/>
-            <path d="M-40 90 C -65 30, -110 0, -160 -10 C -120 25, -85 60, -55 88 Z"/>
-            <path d="M-40 90 C -15 30, 20 0, 65 -10 C 25 25, -5 60, -25 88 Z"/>
-          </g>
-        </g>
-        <!-- right palm B -->
-        <g transform="translate(1010,200) scale(.75)">
-          <path d="M0 620 C -8 440, -22 280, -30 90" stroke="#040814" stroke-width="8" fill="none" stroke-linecap="round"/>
-          <g fill="#040814">
-            <path d="M-30 90 C -65 35, -110 22, -150 30 C -110 35, -75 55, -45 90 Z"/>
-            <path d="M-30 90 C 5 40, 55 24, 95 30 C 55 35, 15 55, -20 90 Z"/>
-            <path d="M-30 90 C -85 50, -150 40, -200 70 C -140 65, -90 75, -40 95 Z"/>
-            <path d="M-30 90 C -15 30, -35 -10, -65 -55 C -45 -10, -35 35, -32 85 Z"/>
-            <path d="M-30 90 C 0 30, 40 -10, 80 -50 C 50 0, 0 50, -25 90 Z"/>
-          </g>
-        </g>
-        <!-- thin background palm (far) -->
-        <g transform="translate(900,220) scale(.55)" opacity=".7">
-          <path d="M0 620 C -6 440, -18 280, -26 90" stroke="#0a1428" stroke-width="7" fill="none" stroke-linecap="round"/>
-          <g fill="#0a1428">
-            <path d="M-26 90 C -55 35, -90 24, -125 30 C -90 35, -60 55, -38 88 Z"/>
-            <path d="M-26 90 C 5 35, 50 22, 85 30 C 50 35, 20 55, -10 88 Z"/>
-            <path d="M-26 90 C -55 50, -110 40, -150 65 C -100 60, -60 72, -36 92 Z"/>
-            <path d="M-26 90 C -10 30, -25 -5, -50 -40 C -35 -5, -28 35, -28 88 Z"/>
-          </g>
-        </g>
-
-        <!-- THE CAR (centered lower-right) -->
-        <g transform="translate(255,420)">
-          <use href="#ev-car" width="800" height="320"/>
-        </g>
-
-        <!-- soft reflection under car on wet road -->
-        <ellipse cx="655" cy="730" rx="370" ry="14" fill="#3aa6ff" opacity=".18"/>
-        <ellipse cx="655" cy="745" rx="280" ry="6" fill="#9bd0f5" opacity=".1"/>
-      </svg>
-
-      <!-- gradient mask blending art into dark hero -->
-      <div class="hero-art__veil"></div>
+    <div class="hero__bg" aria-hidden="true">
+      <picture class="hero__skyline">
+        <source type="image/webp" srcset="assets/img/la-skyline-640.webp 640w, assets/img/la-skyline-1024.webp 1024w, assets/img/la-skyline-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 70vw" />
+        <img src="assets/img/la-skyline-1024.jpg" srcset="assets/img/la-skyline-640.jpg 640w, assets/img/la-skyline-1024.jpg 1024w, assets/img/la-skyline-1600.jpg 1600w" sizes="(max-width: 900px) 100vw, 70vw" alt="" loading="eager" fetchpriority="high"/>
+      </picture>
+      <div class="hero__bg-veil"></div>
+      <div class="hero__bg-glow"></div>
+      <div class="hero__bg-grid"></div>
     </div>
 
-    <!-- HERO COPY (left) -->
     <div class="hero__inner">
       <div class="hero__copy">
         <h1 class="hero__title">
@@ -451,7 +90,7 @@
         <p class="hero__sub"><span class="hero__sub-rule"></span>Skip the App. Ride Direct.<span class="hero__sub-rule"></span></p>
 
         <div class="hero__cta">
-          <a class="btn btn--ghost" href="sms:+17253431515?&body=Hi%20Drive%20Direct%2C%20I%27d%20like%20to%20book%20a%20ride.%20Pickup%3A%20%20Drop-off%3A%20%20Date%2FTime%3A%20">
+          <a class="btn btn--primary" href="sms:+17253431515?&body=Hi%20Drive%20Direct%2C%20I%27d%20like%20to%20book%20a%20ride.%20Pickup%3A%20%20Drop-off%3A%20%20Date%2FTime%3A%20">
             <svg aria-hidden="true"><use href="#i-book"/></svg><span>Book Now</span>
           </a>
           <a class="btn btn--ghost" href="sms:+17253431515">
@@ -474,6 +113,16 @@
           <li class="hero__trust-sep" aria-hidden="true"></li>
           <li><svg aria-hidden="true"><use href="#i-user"/></svg><span>Same Driver Every Ride</span></li>
         </ul>
+      </div>
+
+      <!-- HERO CAR (the star) -->
+      <div class="hero__car" aria-hidden="true">
+        <div class="hero__car-shadow"></div>
+        <div class="hero__car-glow"></div>
+        <picture class="hero__car-pic">
+          <source type="image/webp" srcset="assets/img/car-cutout-1024.webp 1024w, assets/img/car-cutout-1600.webp 1600w, assets/img/car-cutout-2200.webp 2200w" sizes="(max-width: 900px) 95vw, 70vw" />
+          <img src="assets/img/car-cutout-1600.png" srcset="assets/img/car-cutout-1024.png 1024w, assets/img/car-cutout-1600.png 1600w, assets/img/car-cutout-2200.png 2200w" sizes="(max-width: 900px) 95vw, 70vw" alt="Lucid Blue Hyundai Ioniq 5 — your Drive Direct ride" loading="eager" fetchpriority="high"/>
+        </picture>
       </div>
     </div>
   </section>
@@ -498,7 +147,7 @@
     </div>
   </section>
 
-  <!-- ABOUT -->
+  <!-- ABOUT (no second car render — keeps the hero special) -->
   <section class="about" id="about" aria-labelledby="about-title">
     <div class="container about__inner">
       <div class="about__copy">
@@ -511,31 +160,19 @@
         </a>
       </div>
 
-      <div class="about__visual">
-        <svg class="about__svg" viewBox="0 0 800 460" preserveAspectRatio="xMidYMid meet">
-          <defs>
-            <radialGradient id="aboutGlow" cx=".5" cy=".55" r=".55">
-              <stop offset="0" stop-color="#3aa6ff" stop-opacity=".55"/>
-              <stop offset=".5" stop-color="#1f6ed1" stop-opacity=".18"/>
-              <stop offset="1" stop-color="#3aa6ff" stop-opacity="0"/>
-            </radialGradient>
-            <linearGradient id="aboutFloor" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0" stop-color="#0a1424"/>
-              <stop offset="1" stop-color="#040814"/>
-            </linearGradient>
-          </defs>
-          <rect width="800" height="460" fill="url(#aboutFloor)"/>
-          <ellipse cx="400" cy="320" rx="380" ry="120" fill="url(#aboutGlow)"/>
-          <ellipse cx="400" cy="380" rx="280" ry="14" fill="#3aa6ff" opacity=".22"/>
-          <g transform="translate(0,80)">
-            <use href="#ev-car" width="800" height="320"/>
-          </g>
-        </svg>
-        <div class="about__badge">
-          <span class="about__badge-name">Ioniq 5 Limited</span>
-          <span class="about__badge-meta">100% EV <svg aria-hidden="true"><use href="#i-bolt"/></svg></span>
-        </div>
-      </div>
+      <ul class="about__stats" aria-label="Trust at a glance">
+        <li class="astat">
+          <span class="astat__num">4.97<svg aria-hidden="true"><use href="#i-star"/></svg></span>
+          <span class="astat__lbl">Rated on Major Rideshare Platform</span>
+        </li>
+        <li class="astat">
+          <span class="astat__num">11<sup>+</sup></span>
+          <span class="astat__lbl">Years of Driving Experience</span>
+        </li>
+        <li class="astat astat--quote">
+          <span class="astat__quote">&ldquo;Same driver every ride. Direct line. No app middleman. Just a better way to get around.&rdquo;</span>
+        </li>
+      </ul>
     </div>
   </section>
 
@@ -561,19 +198,15 @@
 
   <!-- CLOSING CTA -->
   <section class="closing" id="book" aria-labelledby="closing-title">
-    <div class="closing__chevrons closing__chevrons--l" aria-hidden="true">
-      <span></span><span></span>
-    </div>
-    <div class="closing__chevrons closing__chevrons--r" aria-hidden="true">
-      <span></span><span></span>
-    </div>
+    <div class="closing__chevrons closing__chevrons--l" aria-hidden="true"><span></span><span></span></div>
+    <div class="closing__chevrons closing__chevrons--r" aria-hidden="true"><span></span><span></span></div>
 
     <div class="container closing__inner">
       <h2 class="closing__title" id="closing-title">Ready to Ride?</h2>
       <p class="closing__sub"><span class="hero__sub-rule"></span>Skip the App. Ride Direct.<span class="hero__sub-rule"></span></p>
 
       <div class="closing__cta">
-        <a class="btn btn--ghost btn--lg" href="sms:+17253431515?&body=Hi%20Drive%20Direct%2C%20I%27d%20like%20to%20book%20a%20ride.%20Pickup%3A%20%20Drop-off%3A%20%20Date%2FTime%3A%20">
+        <a class="btn btn--primary btn--lg" href="sms:+17253431515?&body=Hi%20Drive%20Direct%2C%20I%27d%20like%20to%20book%20a%20ride.%20Pickup%3A%20%20Drop-off%3A%20%20Date%2FTime%3A%20">
           <svg aria-hidden="true"><use href="#i-book"/></svg><span>Book Now</span>
         </a>
         <a class="btn btn--ghost btn--lg" href="sms:+17253431515">
@@ -612,10 +245,11 @@
       </div>
       <p class="foot__copy">&copy; <span id="year"></span> Drive Direct.</p>
     </div>
+    <p class="foot__credit">Vehicle &amp; cityscape photography: Damian B Oh / Camiloarenivar &middot; <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="noopener">CC BY-SA 4.0</a></p>
   </div>
 </footer>
 
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
-<script src="assets/js/main.js?v=4" defer></script>
+<script src="assets/js/main.js?v=8" defer></script>
 </body>
 </html>
