@@ -5,7 +5,7 @@
 
   if (!reduce && 'IntersectionObserver' in window) {
     const targets = document.querySelectorAll(
-      '.hero__copy, .section__head, .services__row, .about__copy, .about__visual, .why__grid, .closing__inner'
+      '.hero__copy, .hero__serving, .section__head, .services__row, .about__copy, .about__stats, .why__grid, .closing__inner'
     );
     targets.forEach(el => el.classList.add('reveal'));
     const io = new IntersectionObserver((entries) => {

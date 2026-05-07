@@ -17,7 +17,7 @@
   <link rel="preload" as="image" imagesrcset="assets/img/car-cutout-1024.webp 1024w, assets/img/car-cutout-1600.webp 1600w, assets/img/car-cutout-2200.webp 2200w" imagesizes="(max-width: 900px) 100vw, 70vw" href="assets/img/car-cutout-1600.webp" />
   <link rel="preload" as="image" imagesrcset="assets/img/la-skyline-1024.webp 1024w, assets/img/la-skyline-1600.webp 1600w" imagesizes="(max-width: 900px) 100vw, 70vw" href="assets/img/la-skyline-1024.webp" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Sora:wght@600;700;800;900&display=swap" />
-  <link rel="stylesheet" href="assets/css/styles.css?v=8" />
+  <link rel="stylesheet" href="assets/css/styles.css?v=9" />
 </head>
 <body>
 
@@ -124,6 +124,12 @@
           <img src="assets/img/car-cutout-1600.png" srcset="assets/img/car-cutout-1024.png 1024w, assets/img/car-cutout-1600.png 1600w, assets/img/car-cutout-2200.png 2200w" sizes="(max-width: 900px) 95vw, 70vw" alt="Lucid Blue Hyundai Ioniq 5 — your Drive Direct ride" loading="eager" fetchpriority="high"/>
         </picture>
       </div>
+
+      <p class="hero__serving">
+        <span class="hero__serving-rule"></span>
+        Serving <strong>IE</strong> &middot; <strong>LA</strong> &middot; <strong>OC</strong> &middot; <strong>SoCal</strong>
+        <span class="hero__serving-rule"></span>
+      </p>
     </div>
   </section>
 
@@ -150,10 +156,15 @@
   <!-- ABOUT (no second car render — keeps the hero special) -->
   <section class="about" id="about" aria-labelledby="about-title">
     <div class="container about__inner">
-      <div class="about__copy">
+      <div class="about__copy about__copy--center">
         <p class="section__eyebrow about__eyebrow">ABOUT YOUR DRIVER</p>
         <h2 class="section__title about__title" id="about-title">A Better Ride,<br>Every Ride.</h2>
-        <p class="about__lede">Drive Direct was created to give riders a more personal, reliable, and affordable option by connecting directly with the driver &mdash; no app markups, no silent awkward rides, and better communication.</p>
+        <p class="about__lede">Hi, I&rsquo;m <strong>Michael</strong> &mdash; the driver behind Drive Direct.</p>
+        <p class="about__lede">After 11+ years in rideshare, I created Drive Direct to give riders a safer, more reliable, and more personal transportation experience while also making rides more cost-effective by cutting out the middleman.</p>
+        <p class="about__lede">Too often, riders end up paying higher prices while a large portion goes directly to app fees instead of the actual driver. Drive Direct was built to create a better balance &mdash; helping riders save money while allowing me to earn more fairly for the service I provide.</p>
+        <p class="about__lede">My goal isn&rsquo;t just getting people from place to place &mdash; it&rsquo;s building trusted relationships with riders who value consistency, direct communication, comfort, and peace of mind every time they travel.</p>
+        <p class="about__lede">Whether it&rsquo;s airport rides, long-distance trips, work commutes, or scheduled pickups, I focus on professionalism, safety, reliability, and making every ride comfortable and stress-free.</p>
+        <p class="about__pledge">No random drivers.<br>No surge pricing games.<br>Just dependable service from someone who genuinely cares about the people riding with him.</p>
         <a class="btn btn--primary about__btn" href="#why">
           <svg aria-hidden="true"><use href="#i-user"/></svg>
           <span>Learn More About Me</span>
@@ -167,7 +178,7 @@
         </li>
         <li class="astat">
           <span class="astat__num">11<sup>+</sup></span>
-          <span class="astat__lbl">Years of Driving Experience</span>
+          <span class="astat__lbl">Years of Rideshare Experience</span>
         </li>
         <li class="astat astat--quote">
           <span class="astat__quote">&ldquo;Same driver every ride. Direct line. No app middleman. Just a better way to get around.&rdquo;</span>
@@ -184,14 +195,14 @@
       </header>
 
       <ul class="why__grid">
-        <li class="wcard"><svg class="wcard__ico" aria-hidden="true"><use href="#i-check"/></svg><span class="wcard__t">11+ Years</span><span class="wcard__s">Driving Experience</span></li>
+        <li class="wcard"><svg class="wcard__ico" aria-hidden="true"><use href="#i-check"/></svg><span class="wcard__t">11+ Years</span><span class="wcard__s">Of Rideshare Experience</span></li>
         <li class="wcard"><svg class="wcard__ico" aria-hidden="true"><use href="#i-check"/></svg><span class="wcard__t">Same Driver</span><span class="wcard__s">Every Ride</span></li>
         <li class="wcard"><svg class="wcard__ico" aria-hidden="true"><use href="#i-check"/></svg><span class="wcard__t">Direct</span><span class="wcard__s">Communication</span></li>
-        <li class="wcard"><svg class="wcard__ico" aria-hidden="true"><use href="#i-check"/></svg><span class="wcard__t">Safety-Focused</span><span class="wcard__s">&amp; Reliable</span></li>
-        <li class="wcard"><svg class="wcard__ico" aria-hidden="true"><use href="#i-check"/></svg><span class="wcard__t">Comfortable</span><span class="wcard__s">Professional Experience</span></li>
-        <li class="wcard"><svg class="wcard__ico" aria-hidden="true"><use href="#i-check"/></svg><span class="wcard__t">Strong Repeat-Rider</span><span class="wcard__s">Relationships</span></li>
-        <li class="wcard"><svg class="wcard__ico" aria-hidden="true"><use href="#i-check"/></svg><span class="wcard__t">Better Rates</span><span class="wcard__s">Than Traditional Rideshare</span></li>
-        <li class="wcard wcard--accent"><span class="wcard__num">4.97 <svg aria-hidden="true"><use href="#i-star"/></svg></span><span class="wcard__s">Rated on Major Rideshare Platform</span></li>
+        <li class="wcard"><svg class="wcard__ico" aria-hidden="true"><use href="#i-check"/></svg><span class="wcard__t">Safety First</span><span class="wcard__s">Reliable Every Ride</span></li>
+        <li class="wcard"><svg class="wcard__ico" aria-hidden="true"><use href="#i-check"/></svg><span class="wcard__t">Comfortable</span><span class="wcard__s">Stress-Free Rides</span></li>
+        <li class="wcard"><svg class="wcard__ico" aria-hidden="true"><use href="#i-check"/></svg><span class="wcard__t">Trusted By</span><span class="wcard__s">Repeat Riders</span></li>
+        <li class="wcard"><svg class="wcard__ico" aria-hidden="true"><use href="#i-check"/></svg><span class="wcard__t">Lower Prices</span><span class="wcard__s">Without App Markups</span></li>
+        <li class="wcard"><svg class="wcard__ico" aria-hidden="true"><use href="#i-check"/></svg><span class="wcard__t">Airport &amp; Long-Distance</span><span class="wcard__s">Rides Available</span></li>
       </ul>
     </div>
   </section>
@@ -250,6 +261,6 @@
 </footer>
 
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
-<script src="assets/js/main.js?v=8" defer></script>
+<script src="assets/js/main.js?v=9" defer></script>
 </body>
 </html>
